@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="485.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bank.AccountController">
+    <!-- top labels -->
+    <top>
+        <VBox alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20.0" />
+            </BorderPane.margin>
+            <Label text = "ABC Bank System"/>
+            <Label text = "**********************************************************"/>
+        </VBox>
+    </top>
+    
+    <!-- left drop down -->
+    <left>
+        <VBox>
+            <Label text = "Select Bank Account"/>
+            <ComboBox fx:id="ddlAccount" editable="false" visibleRowCount="3" />
+        </VBox>
+    </left>
+    
+    <!-- right settings/selections -->
+    <right>
+        <VBox>
+            <Label text = "Select Service Type:"/>
+            <ListView fx:id="lstService" />
+            
+            <Label text = "Amount:">
+                <padding>
+                    <Insets top="15.0" />
+                </padding>
+            </Label>
+            <TextField fx:id = "txtAmount" promptText="Enter the amount:"/>
+            
+            <Label text = "Balance:"/>
+            <TextField fx:id = "txtBalance" text="0.0"/>
+            
+            <Label text = "Interest Rate:"/>
+            <TextField fx:id = "txtInterestRate" text="0.0"/>
+            
+            <Label text = " "/>
+            <Button fx:id="btnUpdate" text="Update" onAction="#update" maxWidth="Infinity"/>
+            <Button fx:id="btnExit" text="Exit" onAction="#exit" maxWidth="Infinity"/>
+            <Button fx:id="btnSaveTransaction" text="Save Transaction" onAction="#save" maxWidth="Infinity"/>
+        </VBox>
+    </right>
+    
+    <!-- bottom label/results -->
+    <bottom>
+        <VBox alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="30.0" />
+            </BorderPane.margin>
+            
+            <Label text = "Your Information"/>
+            <Label text = "**********************************************************"/>
+            
+            <Label text = "Account:"/>
+            <Label fx:id="lblAccountResult" />
+            
+            <Label text = "Service:"/>
+            <Label fx:id="lblServiceResult" />
+        </VBox>
+    </bottom>
+</BorderPane>
