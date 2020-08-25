@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<BorderPane prefHeight="485.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bank.AccountController">
+<BorderPane prefHeight="520.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bank.AccountController">
+    <stylesheets>
+        <URL value="@AccountStyleSheet.css"/>
+    </stylesheets>
+    
     <!-- top labels -->
     <top>
-        <VBox alignment="CENTER">
+        <VBox alignment="CENTER" styleClass="top">
             <BorderPane.margin>
                 <Insets bottom="20.0" />
             </BorderPane.margin>
@@ -60,8 +65,8 @@
                 <Insets top="30.0" />
             </BorderPane.margin>
             
-            <Label text = "Your Information"/>
-            <Label text = "**********************************************************"/>
+            <Label text = "Your Information" styleClass="bottomLabel"/>
+            <Label text = "**********************************************************" styleClass="bottomLabel"/>
             
             <Label text = "Account:"/>
             <Label fx:id="lblAccountResult" />

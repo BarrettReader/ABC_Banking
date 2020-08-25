@@ -1,0 +1,21 @@
+/*
+
+*/
+/* 
+    Created on : Aug. 25, 2020, 10:30:20 a.m.
+    Author     : Barrett
+*/
+
+.mainFxmlClass {
+    -fx-background-color: #f2f2f2;
+}
+
+.top {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.bottomLabel{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
